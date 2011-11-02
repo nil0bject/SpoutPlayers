@@ -1,0 +1,238 @@
+name: SpoutPlayers
+main: nil0bject.spout.spoutPlayers.SpoutPlayers
+version: 1.9.1
+authors: [nil0bject]
+depend: [Spout]
+commands:
+    set:
+        description: Allows player to change something about players. Like their appearance.
+        usage: /set [<playerName>||@<type> [<type>  [<value>]]] (type is either walk or cape)(if value is a url, it must be a valid http link to a png)
+permissions:
+    sp.*:
+        description: Allows a player to change any other player walk and cloak
+        children:
+            sp.name.*: true
+            sp.skin.*: true
+            sp.walk.*: true
+            sp.cape.*: true
+            sp.fly.*: true
+            sp.mob.*: true
+            sp.air.*: true
+            sp.swim.*: true
+            sp.sight.*: true
+            sp.grav.*: true
+            sp.warn.*: true
+            sp.sight.*: true
+            sp.jump.*: true
+            sp.pack.*: true
+            sp.pm.*: true
+    sp.name.*:
+        description: Allows a player to change names
+        children:
+            sp.name.save: true
+            sp.name.changeOwn: true
+            sp.name.changeAll: true
+            sp.name.unname: true
+    sp.name.save:
+        description: Allows a player to save changes to the name
+    sp.name.changeOwn:
+        description: Allows a player to change their own name
+    sp.name.changeAll:
+        description: Allows a player to change all player name
+    sp.name.unname:
+        description: Allows a player to remove a custom name from a player they have permission for
+    sp.skin.*:
+        description: Allows a player to change skins
+        children:
+            sp.skin.save: true
+            sp.skin.changeOwn: true
+            sp.skin.changeAll: true
+            sp.skin.unskin: true
+    sp.skin.save:
+        description: Allows a player to save changes to the skin
+    sp.skin.changeOwn:
+        description: Allows a player to change their own skin
+    sp.skin.changeAll:
+        description: Allows a player to change all player skin
+    sp.skin.unskin:
+        description: Allows a player to remove a custom skin from a player they have permission for
+    sp.cape.*:
+        description: Allows a player to change cloaks
+        children:
+            sp.cape.save: true
+            sp.cape.changeOwn: true
+            sp.cape.changeAll: true
+            sp.cape.uncape: true
+    sp.cape.save:
+        description: Allows a player to save changes to the cloak
+    sp.cape.changeOwn:
+        description: Allows a player to change their own cloak
+    sp.cape.changeAll:
+        description: Allows a player to change all player cloaks
+    sp.cape.unwalk:
+        description: Allows a player to remove a custom cloak from a player they have permission for
+    sp.grav.*:
+        description: Allows a player to change gravity
+        children:
+            sp.grav.save: true
+            sp.grav.changeOwn: true
+            sp.grav.changeAll: true
+            sp.grav.uncape: true
+    sp.grav.save:
+        description: Allows a player to save changes to the gravity
+    sp.grav.changeOwn:
+        description: Allows a player to change their own gravity
+    sp.grav.changeAll:
+        description: Allows a player to change all player gravity
+    sp.grav.unwalk:
+        description: Allows a player to remove a custom gravity from a player they have permission for
+    sp.fly.*:
+        description: Allows a player to change flys
+        children:
+            sp.fly.save: true
+            sp.fly.changeOwn: true
+            sp.fly.changeAll: true
+            sp.fly.unfly: true
+    sp.fly.save:
+        description: Allows a player to save changes to the fly
+    sp.fly.changeOwn:
+        description: Allows a player to change their own fly
+    sp.fly.changeAll:
+        description: Allows a player to change all player fly
+    sp.fly.unfly:
+        description: Allows a player to remove a custom fly from a player they have permission for
+    sp.walk.*:
+        description: Allows a player to change walking speeds
+        children:
+            sp.walk.save: true
+            sp.walk.changeOwn: true
+            sp.walk.changeAll: true
+            sp.walk.unwalk: true
+    sp.walk.save:
+        description: Allows a player to save changes to the walking speed
+    sp.walk.changeOwn:
+        description: Allows a player to change their own walk
+    sp.walk.changeAll:
+        description: Allows a player to change all player walk
+    sp.walk.unwalk:
+        description: Allows a player to remove a custom walk from a player they have permission for
+    sp.swim.*:
+        description: Allows a player to change swims
+        children:
+            sp.swim.save: true
+            sp.swim.changeOwn: true
+            sp.swim.changeAll: true
+            sp.swim.unswim: true
+    sp.swim.save:
+        description: Allows a player to save changes to the swim
+    sp.swim.changeOwn:
+        description: Allows a player to change their own swim
+    sp.swim.changeAll:
+        description: Allows a player to change all player swim
+    sp.swim.unswim:
+        description: Allows a player to remove a custom swim from a player they have permission for
+    sp.air.*:
+        description: Allows a player to change airs
+        children:
+            sp.air.save: true
+            sp.air.changeOwn: true
+            sp.air.changeAll: true
+            sp.air.unair: true
+    sp.air.save:
+        description: Allows a player to save changes to the air
+    sp.air.changeOwn:
+        description: Allows a player to change their own air
+    sp.air.changeAll:
+        description: Allows a player to change all player air
+    sp.air.unair:
+        description: Allows a player to remove a custom air from a player they have permission for
+    sp.sight.*:
+        description: Allows a player to change sights
+        children:
+            sp.sight.save: true
+            sp.sight.changeOwn: true
+            sp.sight.changeAll: true
+            sp.sight.unsight: true
+    sp.sight.save:
+        description: Allows a player to save changes to the sight
+    sp.sight.changeOwn:
+        description: Allows a player to change their own sight
+    sp.sight.changeAll:
+        description: Allows a player to change all player sight
+    sp.sight.unsight:
+        description: Allows a player to remove a custom sight from a player they have permission for
+    sp.jump.*:
+        description: Allows a player to change jumps
+        children:
+            sp.jump.save: true
+            sp.jump.changeOwn: true
+            sp.jump.changeAll: true
+            sp.jump.unjump: true
+    sp.jump.save:
+        description: Allows a player to save changes to the jump
+    sp.jump.changeOwn:
+        description: Allows a player to change their own jump
+    sp.jump.changeAll:
+        description: Allows a player to change all player jump
+    sp.jump.unjump:
+        description: Allows a player to remove a custom jump from a player they have permission for
+    sp.warn.*:
+        description: Allows a player to change warns
+        children:
+            sp.warn.save: true
+            sp.warn.changeOwn: true
+            sp.warn.changeAll: true
+            sp.warn.unwarn: true
+    sp.warn.save:
+        description: Allows a player to save changes to the warn
+    sp.warn.changeOwn:
+        description: Allows a player to change their own warn
+    sp.warn.changeAll:
+        description: Allows a player to change all player warn
+    sp.warn.unwarn:
+        description: Allows a player to remove a custom warn from a player they have permission for
+    sp.pack.*:
+        description: Allows a player to change packs
+        children:
+            sp.pack.save: true
+            sp.pack.changeOwn: true
+            sp.pack.changeAll: true
+            sp.pack.unpack: true
+    sp.pack.save:
+        description: Allows a player to save changes to the pack
+    sp.pack.changeOwn:
+        description: Allows a player to change their own pack
+    sp.pack.changeAll:
+        description: Allows a player to change all player pack
+    sp.pack.unpack:
+        description: Allows a player to remove a custom pack from a player they have permission for
+    sp.mob.*:
+        description: Allows a player to change mobs
+        children:
+            sp.mob.save: true
+            sp.mob.changeOwn: true
+            sp.mob.changeAll: true
+            sp.mob.unmob: true
+    sp.mob.save:
+        description: Allows a player to save changes to the mob
+    sp.mob.changeOwn:
+        description: Allows a player to change their own mob
+    sp.mob.changeAll:
+        description: Allows a player to change all player mob
+    sp.mob.unmob:
+        description: Allows a player to remove a custom mob from a player they have permission for
+    sp.pm.*:
+        description: Allows a player to change pms
+        children:
+            sp.pm.save: true
+            sp.pm.changeOwn: true
+            sp.pm.changeAll: true
+            sp.pm.unpm: true
+    sp.pm.save:
+        description: Allows a player to save changes to the pm
+    sp.pm.changeOwn:
+        description: Allows a player to change their own pm
+    sp.pm.changeAll:
+        description: Allows a player to change all player pm
+    sp.pm.unpm:
+        description: Allows a player to remove a custom pm from a player they have permission for
